@@ -20,7 +20,6 @@ public class StudentTests
         //Arrange
         var student = new Student{id = 7, GivenName="Karl", Surname="Karl", 
         StartDate=(new DateTime(2020, 09, 16)), EndDate=( new DateTime(2021, 09, 18)), GraduationDate = new DateTime(3025, 07, 24)};
-        //var student= new Student(7,"Karl", "Karl" , new DateTime(2020, 09, 16), new DateTime(2021, 09, 18), new DateTime(3025, 07, 24));
         //Act
         var result = student.ToString();
         //Assert
@@ -33,7 +32,6 @@ public class StudentTests
         //Arrange
         var student = new Student{id = 12, GivenName="Peter", Surname="Sestoft", 
         StartDate=(new DateTime(2018, 09, 16)), EndDate=( new DateTime(2021, 07, 12)), GraduationDate = new DateTime(2021, 07, 24)};
-        //var student= new Student(12,"Peter", "Sestoft" , new DateTime(2018, 09, 16), new DateTime(2021, 07, 12), new DateTime(2021, 07, 24));
         //Act
         var result = student.ToString();
         //Assert
