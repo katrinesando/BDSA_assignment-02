@@ -8,8 +8,11 @@ public class Student {
     public DateTime EndDate {get; set;}
     public DateTime GraduationDate {get; set;}
 
+    // The status is being set by compating the StartDate, EndDate and GraduationDate with the current date
+    //found by DateTime.Now
+    //By default if no dates given the status is set to 'Graduated'
     public Status status {get{
-        
+
         var now = DateTime.Now;
         if(now <= StartDate){
             return Status.New;
