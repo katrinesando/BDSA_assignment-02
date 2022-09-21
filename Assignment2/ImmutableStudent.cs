@@ -22,7 +22,7 @@ public record ImmutableStudent
         if (StartDate.Year == DateTime.Now.Year){
             return Status.New;
         }
-        // If a students GraduationDate is in the past, and they are now a drop out, they must have graduatated
+        // If a students GraduationDate is in the past, and they are not a drop out, they must have graduatated
         if (GraduationDate.CompareTo(DateTime.Now) == -1){
             return Status.Graduated;
         }

@@ -7,8 +7,10 @@ public class DelegatesTests
     public void Print_namrepuS_given_Superman()
     {
         
-        /* Find way to test print statments
-    Action<string> reverseWord = s => {
+        using var writer = new StringWriter();
+        Console.SetOut(writer);
+        
+        Action<string> reverseWord = s => {
         char[] word = s.ToCharArray();
         Array.Reverse(word);
         var reversed = new string(word);
@@ -16,8 +18,11 @@ public class DelegatesTests
     };
 
     reverseWord("Superman");
-    Console.ReadLine().Should().Be("namrepuS");
-    */
+
+    var output = writer.GetStringBuilder().ToString().TrimEnd();
+    
+    output.Should().Be("namrepuS");
+    
     }
 
     [Fact]
